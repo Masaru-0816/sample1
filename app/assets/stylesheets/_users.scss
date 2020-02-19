@@ -1,11 +1,11 @@
 // 新規会員登録トップ
 .account_body {
   background-color: rgb(245, 245, 245);
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   font-family: "Source Sans Pro", "Helvetica", "Arial", "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", "sans-serif";
   .account_header {
-    height: 20%;
+    height: 128px;
     display: table;
     width: 100%;
     display: flex;
@@ -19,41 +19,45 @@
   }
   .account_main {
     background-color: rgb(255, 255, 255);
-    height: 50%;
-    width: 700px;
+    width: 456px;
     margin: 0px auto;
     position: relative;
     &_top {
-      height: 10%;
-      max-height: 97px;
-      padding: 32px;
-      border-bottom: 1px solid rgb(245, 245, 245);
-      h1 {
-        font-size: 22px;
-        text-align: center;
-      } 
+      font-size: 14px;
+      height: 64px;
+      padding: 40px 60px;
+      border-bottom: 1px solid #eee;
+      a {
+        text-decoration: none;
+        p {
+          text-align: center;
+        }
+        h1 {
+          background-color: #0099e8;
+          color: #fff;
+          text-align: center;
+          margin-top: 8px;
+          height: 42px;
+          line-height: 42px;
+        }
+      }
     }
-    
-    &_bottom {
-      height: 70%;
-      color: rgb(51, 51, 51);
-      position: relative;
-      padding: 24px 0px;
+    &_middle {
+      height: 116px;
+      padding: 32px 64px;
+      font-size: 14px;
+      a {
+        text-decoration: none;
+      }
       &_bar {
         height: 100%;
-        a {
-          text-decoration: none;
-        }
         &_btn{
           display: block;
           height: 50px;
           line-height: 50px;
-          width: 343px;
           margin: 0 auto;
-          border-radius: 5px;
           text-align: center;
           &_mail {
-            background-color: #ea352d;
             color: #fff;
             position: relative;
             .account_icon_mail {
@@ -66,7 +70,6 @@
           &_facebook {
             background-color: #385185;
             color: #fff;
-            margin-top: 16px;
             position: relative;
             .account_icon_facebook {
               position: absolute;
@@ -80,7 +83,7 @@
             color: #333;
             margin-top: 16px;
             position: relative;
-            border: 1px solid rgb(119, 119, 119);
+            border: 1px solid #979797;
             .account_icon_google {
               display: inline-block;
               position: absolute;
@@ -91,9 +94,59 @@
         }
       }
     }
+    &_bottom {
+      height: 370px;
+      padding: 24px 64px 32px 64px;
+        &_bar_password {
+          margin-top: 24px;
+        }
+        &_bar_robot {
+          margin-top: 24px;
+        }
+        &_bar_login {
+          margin-top: 24px;
+          a {
+            text-decoration: none;
+            h1 {
+              background-color: red;
+              color: #fff;
+              text-align: center;
+              margin-top: 8px;
+              height: 48px;
+              line-height: 48px;
+            }
+          }
+        }
+        input {
+          height: 28px;
+          width: 294px;
+          padding: 10px 16px 8px 16px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          line-height: 1.5;
+          font-size: 16px; 
+        }
+        &_bar_login {
+          margin-top: 40px;
+          font-size: 14px;
+          a {
+            text-decoration: none;
+            color: #0099e8;
+          }
+          a:hover {
+            text-decoration: underline;
+          }
+          h1 {
+            margin-top: 8px;
+            height: 48px;
+            line-height: 48px;
+          }         
+        }
+
+    }
   }
   .account_footer {
-    height: 500px;
+    height: 140px;
     width: 456px;
     margin: 0 auto;
     padding: 40px 0px;

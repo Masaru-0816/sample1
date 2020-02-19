@@ -64,3 +64,4 @@ gem "haml-rails", ">= 1.0", '<= 2.0.1'
 gem "devise"
 gem 'font-awesome-sass'
 gem 'source-sans-pro-rails'
+gem 'recaptcha', require: "recaptcha/rails"

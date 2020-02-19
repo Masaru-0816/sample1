@@ -4,22 +4,38 @@
 
   .account_main
     .account_main_top
-      %h1 新規会員登録
+      %p アカウントをお持ちでない方はこちらから
+      = link_to "new_user_registration_path", class: "account_main_bottom_bar_btn account_main_bottom_bar_btn_mail" do
+        %h1 新規会員登録
+
+    .account_main_middle
+      = link_to "https://www.facebook.com/", class: "account_main_middle_bar_btn account_main_middle_bar_btn_facebook" do
+        = icon('fab', 'facebook-square',  class: "account_icon_facebook")
+        Facebookでログインする
+      = link_to "https://www.google.com/", class: "account_main_middle_bar_btn account_main_middle_bar_btn_google" do
+        = image_tag "google_logo.png", size: "25x25", class: "account_icon_google"
+        Googleでログインする
 
     .account_main_bottom
       .account_main_bottom_bar
-        = link_to "new_user_registration_path", class: "account_main_bottom_bar_btn account_main_bottom_bar_btn_mail" do
-          = icon('far', 'facebook-square',  class: "account_icon_mail")
-          メールアドレスで登録する
-        = link_to "https://www.facebook.com/", class: "account_main_bottom_bar_btn account_main_bottom_bar_btn_facebook" do
-          = icon('fab', 'facebook-square',  class: "account_icon_facebook")
-          Facebookで登録する
-        = link_to "https://www.google.com/", class: "account_main_bottom_bar_btn account_main_bottom_bar_btn_google" do
-          = image_tag "google_logo.png", size: "25x25", class: "account_icon_google"
-          Googleで登録する
+        .account_main_bottom_bar_mail
+          %input.login-input-text{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}
+
+        .account_main_bottom_bar_password
+          %input.login-input-text{:name => "password", :placeholder => "パスワード", :type => "password", :value => ""}
+
+        .account_main_bottom_bar_robot
+          = image_tag "robot.png", size: "300x75"
+
+        .account_main_bottom_bar_login
+          = link_to "new_user_registration_path" do
+            %h1 ログイン
+
+        .account_main_bottom_bar_login
+          = link_to "new_user_registration_path" do
+            %p パスワードをお忘れの方
+
+
 
   = render "shared/footer"
   -# フッター部分テンプレート
-
-  = render "shared/camera"
-  -# 出品ボタン部分テンプレート
